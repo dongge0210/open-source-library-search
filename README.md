@@ -19,6 +19,7 @@
 - [测试](#测试)
 - [系统/硬件/性能/监控](#系统硬件性能监控)
 - [2FA 认证/人机检测](#2fa-认证人机检测)
+- [远程控制/运维](#远程控制运维)
 
 ---
 
@@ -29,7 +30,6 @@
 | [Boost](https://www.boost.org/) | C++通用库集合，极其丰富 | BSL-1.0 | [GitHub](https://github.com/boostorg/boost) |
 | [STL](https://github.com/microsoft/STL) | C++标准库实现 | Apache-2.0 | [GitHub](https://github.com/microsoft/STL) |
 | [fmt](https://fmt.dev/) | 现代C++格式化库 | MIT | [GitHub](https://github.com/fmtlib/fmt) |
-| [spdlog](https://github.com/gabime/spdlog) | 高性能日志库 | MIT | [GitHub](https://github.com/gabime/spdlog) |
 
 ## 网络/协议/通信
 
@@ -37,7 +37,6 @@
 |---|---|---|---|
 | [curl](https://curl.se/) | 跨平台HTTP等协议库 | curl license | [GitHub](https://github.com/curl/curl) |
 | [libevent](http://libevent.org/) | 高性能事件驱动网络库 | BSD-3-Clause | [GitHub](https://github.com/libevent/libevent) |
-| [libuv](https://libuv.org/) | 跨平台异步I/O库 | MIT | [GitHub](https://github.com/libuv/libuv) |
 | [asio](https://think-async.com/) | C++异步IO | BSL-1.0 | [GitHub](https://github.com/chriskohlhoff/asio) |
 | [libwebsockets](https://libwebsockets.org/) | WebSocket/HTTP/HTTPS 支持 | MIT | [GitHub](https://github.com/warmcat/libwebsockets) |
 | [Mongoose](https://cesanta.com/mongoose) | 功能全面、嵌入式/跨平台 HTTP/HTTPS/WebSocket/HTTP3 服务器库 | GPL-2.0/Commercial | [GitHub](https://github.com/cesanta/mongoose) |
@@ -89,8 +88,6 @@
 | 名称 | 简介 | 协议 | 链接 |
 |---|---|---|---|
 | [openssl](https://www.openssl.org/) | 行业事实标准的通用加密库，支持SSL/TLS、对称/非对称加密、证书、哈希等，功能极其全面，广泛用于服务器、客户端、嵌入式等 | Apache-2.0 | [GitHub](https://github.com/openssl/openssl) |
-| [libsodium](https://libsodium.gitbook.io/) | 现代、易用、高安全的加密库，API 简洁，适合新项目，涵盖加密、签名、密钥交换等 | ISC | [GitHub](https://github.com/jedisct1/libsodium) |
-| [mbedTLS](https://www.trustedfirmware.org/projects/mbed-tls/) | 轻量级 SSL/TLS 加密库，适合嵌入式/物联网 | Apache-2.0 | [GitHub](https://github.com/Mbed-TLS/mbedtls) |
 | [libssh](https://www.libssh.org/) | SSH 协议实现与客户端/服务器功能，广泛用于远程管理和安全传输 | LGPL-2.1 | [GitHub](https://github.com/libssh/libssh) |
 | [Crypto++](https://www.cryptopp.com/) | C++开源高性能密码学库，涵盖对称/非对称加密、哈希、MAC、流密码、椭圆曲线、随机数等，算法丰富，头文件库，跨平台 | BSL-1.0 | [GitHub](https://github.com/weidai11/cryptopp) |
 
@@ -111,13 +108,9 @@
 
 | 名称 | 简介 | 协议 | 链接 |
 |---|---|---|---|
-| [htop](https://github.com/htop-dev/htop) | 交互式进程/系统监控，支持CPU/内存/进程/负载等实时展示 | GPL-2.0 | [GitHub](https://github.com/htop-dev/htop) |
-| [collectd](https://github.com/collectd/collectd) | 强大的系统性能数据采集守护进程，支持插件扩展，可采集CPU/内存/磁盘/网络/温度等 | MIT | [GitHub](https://github.com/collectd/collectd) |
-| [sysstat](https://github.com/sysstat/sysstat) | 包含sar/iostat/mpstat等经典系统性能分析工具，统计历史与实时数据 | GPL-2.0 | [GitHub](https://github.com/sysstat/sysstat) |
-| [lm-sensors](https://github.com/lm-sensors/lm-sensors) | Linux平台硬件传感器检测库/工具，支持温度、电压、风扇转速读取 | GPL-2.0 | [GitHub](https://github.com/lm-sensors/lm-sensors) |
-| [smartmontools](https://github.com/mirror/smartmontools) | 硬盘S.M.A.R.T健康监控，检测磁盘健康状态、寿命、坏道等 | GPL-2.0 | [GitHub](https://github.com/mirror/smartmontools) |
-| [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) | 跨平台硬件监控库（C#实现，常用于与C/C++服务配合），可读取主板/CPU/显卡/硬盘等多项信息 | LGPL-3.0 | [GitHub](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) |
 | [hwloc](https://github.com/open-mpi/hwloc) | 硬件拓扑发现库，自动识别多核/NUMA/PCIe拓扑，便于资源绑定和亲和性优化 | BSD-3-Clause | [GitHub](https://github.com/open-mpi/hwloc) |
+| [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) | 跨平台硬件监控库（C#实现，常用于与C/C++服务配合），可读取主板/CPU/显卡/硬盘等多项信息 | LGPL-3.0 | [GitHub](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) |
+| [smartmontools](https://github.com/mirror/smartmontools) | 硬盘S.M.A.R.T健康监控，检测磁盘健康状态、寿命、坏道等 | GPL-2.0 | [GitHub](https://github.com/mirror/smartmontools) |
 
 ## 2FA 认证/人机检测
 
@@ -125,6 +118,12 @@
 |---|---|---|---|
 | [oath-toolkit (liboath)](https://github.com/OpenSC/oath-toolkit) | 功能强大的 TOTP/HOTP 双因素认证库，兼容 Google/Microsoft Authenticator 等主流 App | GPL-3.0 | [官方文档](https://www.nongnu.org/oath-toolkit/) |
 | [SimpleCaptcha](https://github.com/hiroi-sora/SimpleCaptcha) | C++ 图形验证码生成库，支持扭曲字符、数学题、噪声等多种风格 | MIT | [GitHub](https://github.com/hiroi-sora/SimpleCaptcha) |
+
+## 远程控制/运维
+
+| 名称 | 简介 | 协议 | 链接 |
+|---|---|---|---|
+| [MeshCentral](https://github.com/Ylianst/MeshCentral) | 开源远程管理平台，支持跨平台远控（Windows/Linux/Mac）、远程桌面、终端、文件传输等多种场景，适合企业级运维和批量管理 | Apache-2.0 | [GitHub](https://github.com/Ylianst/MeshCentral) |
 
 ---
 
